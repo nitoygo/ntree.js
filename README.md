@@ -6,7 +6,7 @@ NTree is a JavaScript library for creating and traversing n-ary tree structures.
 
 ### Node
 
-NTree is available as an npm module so you can install it with `npm install n-tree` and use it in your code:
+NTree is available as an npm module so you can install it with `npm install ntree.js` and use it in your code:
 
 ```js
 const ntree = require('ntree.js')
