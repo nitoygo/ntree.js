@@ -14,7 +14,7 @@ const ntree = require('ntree.js')
 
 ## Usage
 
-By importing n-tree, you get access to the following classes:
+By importing ntree, you get access to the following classes:
 - ```Node``` - For creating and manipulating node objects to be added to a tree
 - ```TreeUtil``` - For utility functions necessary to do something to a tree
 
