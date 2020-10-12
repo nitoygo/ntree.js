@@ -1,6 +1,6 @@
 {
-  "name": "n-tree",
-  "version": "1.0.0",
+  "name": "ntree.js",
+  "version": "1.0.1",
   "description": "javascript library for creating and traversing n-ary tree structures.",
   "main": "index.js",
   "directories": {
@@ -17,13 +17,12 @@
   "keywords": [
     "tree",
     "n-ary",
-    "tree",
-    "traversal"
+    "tree traversal"
   ],
-  "author": "Benito Go III",
+  "author": "Nitoy Go",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nitoygo/n-tree/issues"
+    "url": "https://github.com/nitoygo/ntree.js/issues"
   },
-  "homepage": "https://github.com/nitoygo/n-tree#readme"
+  "homepage": "https://github.com/nitoygo/ntree.js#readme"
 }

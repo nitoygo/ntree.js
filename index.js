@@ -29,9 +29,41 @@ const TreeUtil = (function() {
 
             // check if there are children to be processed next
             if (nextNode && !nextNode.isLeaf()) {
-              while (nextNode.children.length) {
-                nodeStack.push(nextNode.children.pop())
-              }
+              let childrenReversed = [...nextNode.children].reverse()
+              nodeStack.push(...childrenReversed)
+            }
+
+            if (nextNode) {
+              return {value: nextNode, done: false}
+            }
+            else {
+              return {done: true}
+            }
+          }
+        }
+      }
+    }
+  }
+
+  function getDepthFirstIterable(rootNode) {
+
+    if (!(rootNode instanceof Node)) {
+      throw new TypeError('Parameter rootNode must be of Node type')
+    }
+
+    let nodeStack = [rootNode]
+
+    return {
+      [Symbol.iterator]: () => {
+        return {
+          next: () => {
+            // process the "current parent"
+            let nextNode = nodeStack.pop()
+
+            // check if there are children to be processed next
+            if (nextNode && !nextNode.isLeaf()) {
+              let childrenReversed = [...nextNode.children].reverse()
+              nodeStack.unshift(...childrenReversed)
             }
 
             if (nextNode) {
@@ -47,7 +79,8 @@ const TreeUtil = (function() {
   }
 
   return {
-    getPreOrderIterable : getPreOrderIterable
+    getPreOrderIterable : getPreOrderIterable,
+    getDepthFirstIterable : getDepthFirstIterable
   }
 })()
 

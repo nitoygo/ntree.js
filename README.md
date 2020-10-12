@@ -50,5 +50,5 @@ for (node of iterable) {
 }
 ```
 
-As of this version, only pre-order traversal is supported.  
+As of this version, only ```getPreOrderIterable()``` and ```getDepthFirstIterable()``` is supported.  
 Other API add-ons to this library are currently under development.

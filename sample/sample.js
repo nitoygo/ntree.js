@@ -49,11 +49,26 @@ CNode.addChild(ONode)
 
 INode.addChild(LNode)
 
-let iterable = TreeUtil.getPreOrderIterable(ANode)
+function preOrderTraversal() {
+  let preIterable = TreeUtil.getPreOrderIterable(ANode)
+  let traversedNodes = Array.from(preIterable)
+  let treeAsList = traversedNodes.map((node) => {
+    return node.data
+  })
 
-let traversedNodes = Array.from(iterable)
-let treeAsList = traversedNodes.map((node) => {
- return node.data
-})
+  console.log("Pre-Order: " + treeAsList.toString())
+}
 
-console.log(treeAsList)
+function depthFirstTraversal() {
+  let depthIterable = TreeUtil.getDepthFirstIterable(ANode)
+  
+  let traversedNodes = Array.from(depthIterable)
+  let treeAsList = traversedNodes.map((node) => {
+   return node.data
+  })
+  
+  console.log("Depth First: " + treeAsList.toString())
+}
+
+preOrderTraversal()
+depthFirstTraversal()
